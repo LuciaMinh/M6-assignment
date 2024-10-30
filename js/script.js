@@ -1,5 +1,5 @@
 let id;
-let name;
+let fullName;
 let ext;
 let email;
 let department;
