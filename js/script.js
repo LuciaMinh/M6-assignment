@@ -1,25 +1,10 @@
-let id;
-let fullName;
-let ext;
-let email;
-let department;
-let submit;
+const form = document.getElementById('empForm');
 
-id = document.getElementById('id');
-fullName = document.getElementById('name');
-ext = document.getElementById('ext');
-email = document.getElementById('email');
-department = document.getElementById('department');
-submit = document.querySelector('button[type="submit"]');
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevents the default form submission
 
-submit.addEventListener('click', (event) => {
-  event.preventDefault();
-  const formData = {
-    '1. ID'              : id.value,
-    '2. Name'            : fullName.value,
-    '3. Extension'       : ext.value,
-    '4. Email'           : email.value,
-    '5. Department'      : department.value,
-  };
-  console.log(formData);
+  console.log(`ID: ${document.getElementById('id').value}`);
+  console.log(`Name: ${document.getElementById('name').value}`);
+  console.log(`Extension: ${document.getElementById('ext').value}`);
+  console.log(`Department: ${document.getElementById('department').value}`);
 });
